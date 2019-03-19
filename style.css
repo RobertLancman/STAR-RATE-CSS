@@ -1,0 +1,58 @@
+body {
+    background: purple;
+}
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+h1 {
+    color: #ffa500;
+    position: absolute;
+    font-size: 4rem;
+    font-family: 'Baloo Chettan', cursive;    font-weight: 700;
+    top: -150px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.stars {
+    background: black;
+    height: 30px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: center;
+}
+.stars input {
+    position: absolute;
+    left: -999999999px;
+}
+label {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #000;
+    color: transparent;
+    border-radius: 10px;
+}
+label::before {
+    content: '★';
+    color: silver;
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: -100%;
+}
+label:hover::before,
+label:hover ~ label::before,
+.stars input:checked ~ label::before {
+    color: #ffa500;
+}
+
+
+
